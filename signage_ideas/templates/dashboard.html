@@ -1,0 +1,137 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block title %}
+Signage Dashboard
+{% endblock %}
+
+{% block content %}
+<!--image slider start -->
+<!-- Image Slider Start -->
+<!-- Image Slider Start -->
+{% comment %} <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner mt-3">
+       
+        <div class="carousel-item active">
+            <img src="{% static 'img/slider2.jpg' %}" height="50px" class="d-block w-100 img-fluid" alt="About Image 2">
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'img/slider1.jpg' %}" height="50px" class="d-block w-100 img-fluid" alt="About Image 3">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div> {% endcomment %}
+
+<div class="owl-carousel dashboard-slider">
+    <div class="item">
+        <div class="slider-item">
+            <img src="{% static 'img/slider1.jpg' %}" alt="">
+        </div>
+    </div>
+    <div class="item">
+        <div class="slider-item">
+            <img src="{% static 'img/slider2.jpg' %}" alt="">
+        </div>
+    </div>
+    <div class="item">
+        <div class="slider-item">
+            <img src="{% static 'img/slider1.jpg' %}" alt="">
+        </div>
+    </div>
+</div>
+
+<!-- Image Slider End -->
+
+<!--slider start-->
+<div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="text-center">
+            <h5 class="section-title ff-secondary text-center text-primary fw-normal">Work Process</h5>
+            <h1 class="mb-5">We Work with you Through The Whole Process</h1>
+        </div>
+        <div class="owl-carousel testimonial-carousel">
+            <div class="testimonial-item bg-transparent border rounded p-4">
+                <i class="fa-2x text-primary mb-3"><h3>1</h3></i>
+                <p><h3>CLIENT MEETING</h3></p>
+                <p>To understand what type of visual communications are needed, the environment they will be placed in, and how long they will be used to create the best solution.</p>
+            </div>
+            <div class="testimonial-item bg-transparent border rounded p-4">
+                <i class="fa-2x text-primary mb-3"><h3>2</h3></i>
+                <p><h3>PRODUCT RECOMMENDATION</h3></p>
+                <P>Our experts will recommend the products and types of materials to use based on your needs.</P>
+                
+            </div>
+            <div class="testimonial-item bg-transparent border rounded p-4">
+                <i class="fa-2x text-primary mb-3"><h3>3</h3></i>
+                <p><h3>GATHER MATERIALS</h3></p>
+                <P>Collect assets needed to complete the project.</P>
+            </div>
+            <div class="testimonial-item bg-transparent border rounded p-4">
+                <i class="fa-2x text-primary mb-3"><h3>4</h3></i>
+                <p><h3>SURVEY</h3></p>
+                <p>We may need to conduct a site visit and take digital measurements and photos to ensure a perfect fit.</p>
+                
+            </div>
+            <div class="testimonial-item bg-transparent border rounded p-4">
+                <i class="fa-2x text-primary mb-3"><h3>5</h3></i>
+                <p><h3>PREPRESS</h3></p>
+                <p>Our graphic review process ensures high quality, colorful output.</p>
+                
+            </div>
+            <div class="testimonial-item bg-transparent border rounded p-4">
+                <i class="fa-2x text-primary mb-3"><h3>6</h3></i>
+                <p><h3>PRODUCTION</h3></p>
+                <p>Of your custom solution from printing to finishing striving for the completion of your solution.</p>
+                
+            </div>
+            <div class="testimonial-item bg-transparent border rounded p-4">
+                <i class="fa-2x text-primary mb-3"><h3>7</h3></i>
+                <p><h3>FINISHED PRODUCT</h3></p>
+                <p>Including any needed hardware and installation of your graphics.</p>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--slider end-->
+
+<!-- clint start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-title ff-secondary text-center text-primary fw-normal mb-5">Our Clients</h2>
+            
+        </div>
+        <div class="row g-4">
+            {% for c in client %}
+            <div class="col-lg-2 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="rounded pt-3">
+                    <div class="p-4 img-wrapper">
+                        <img class="img-shadow" src="{{ c.img.url }}" style="height:100px; width:100px;" alt="img">
+                    </div>
+                </div>
+            </div>
+            
+            
+            {% endfor %}
+            
+        </div>
+    </div>
+</div>
+<!-- clint end-->
+ 
+{% endblock %}
+
+{% block footer %}{% endblock %}
