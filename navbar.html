@@ -1,0 +1,102 @@
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+        <div class="logo">
+            <a href="{% url "home" %}" class="navbar-brand p-0">
+                    <img src="static/img/logo.png" alt="Signage">  
+            </a>
+        </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a  class="nav-link active" aria-current="page" href="{% url 'vehicle_magnet' %}">Vechicle Magnet</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Paper Prints
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{% url "businesscard" %}">Business Card</a></li>
+                <li><a class="dropdown-item" href="{% url "flyers" %}">Flyers</a></li>
+                <li><a class="dropdown-item" href="{% url "postcard" %}">Post Card</a></li>
+                <li><a class="dropdown-item" href="{% url "brochures" %}">Brochures</a></li>
+                <li><a class="dropdown-item" href="{% url "doorhanger" %}">Door Hanger</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Banner
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{% url "vinylbanner" %}">Vinyl Banner</a></li>
+                <li><a class="dropdown-item" href="{% url "meshbanner" %}">Mesh Banner</a></li>
+                <li><a class="dropdown-item" href="{% url "fabricbanner" %}">Fabric Banner</a></li>
+                <li><a class="dropdown-item" href="{% url "rollupbanner" %}">Rollup Banner</a></li>
+                <li><a class="dropdown-item" href="{% url "backlitbanner" %}">Backlit Banner</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Flag
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{% url 'angledflag' %}">Angled Flag</a></li>
+                <li><a class="dropdown-item" href="{% url 'convexflag' %}">Convex Flag</a></li>
+                <li><a class="dropdown-item" href="{% url 'rectangleflag' %}">Rectangle Flag</a></li>
+                <li><a class="dropdown-item" href="{% url 'poleflag' %}">Pole Flag</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Truck sign/Sticker
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{% url "decal" %}">Decal</a></li>
+                <li><a class="dropdown-item" href="{% url "sticker" %}">Sticker</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Window Sign
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{% url 'adhesivevinyl' %}">Adhesive Vinyl</a></li>
+                <li><a class="dropdown-item" href="{% url 'perfratvinyl' %}">Perfrat Vinyl</a></li>
+                <li><a class="dropdown-item" href="{% url 'threemvinyl' %}">3M Vinyl</a></li>
+                <li><a class="dropdown-item" href="{% url 'windowclingvinyl' %}">Window Cling Vinyl</a></li>
+                <li><a class="dropdown-item" href="{% url 'translucentvinyl' %}">Translucent Vinyl</a></li>
+                <li><a class="dropdown-item" href="{% url 'clearvinyl' %}">Clear Vinyl</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                3D letter
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{% url 'nonled' %}">Non LED</a></li>
+                            <li><a class="dropdown-item" href="{% url 'channellatter' %}">Channel Letter</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Property Signs
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{% url 'yardsigns' %}">Yard Signs</a></li>
+                            <li><a class="dropdown-item" href="{% url 'framestandi' %}">Frame Stands</a></li>
+                            <li><a class="dropdown-item" href="{% url 'aluminum' %}">Aluminum Signs</a></li>
+                            <li><a class="dropdown-item" href="{% url 'postsigns' %}">Post Signs</a></li>
+                            <li><a class="dropdown-item" href="{% url 'pylonsigns' %}">Pylon Signs</a></li>
+                       </ul>
+          </li>
+
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
